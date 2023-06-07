@@ -7,9 +7,24 @@ function Header() {
         #VanLife
       </Link>
       <nav>
-        <NavLink className={({isActive})=>isActive?"active-link":null} to="/host">Host</NavLink>
-        <NavLink className={({isActive})=>isActive?"active-link":null} to="/about">About</NavLink>
-        <NavLink className={({isActive})=>isActive?"active-link":null} to="/vans">Vans</NavLink>
+        <NavLink
+          to="/host"
+          className={({ isActive }) => (isActive ? "active-link" : null)}
+        >
+          Host
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "active-link" : null)}
+        >
+          About
+        </NavLink>
+        <NavLink
+          to="/vans"
+          className={({ isActive }) => (isActive ? "active-link" : null)}
+        >
+          Vans
+        </NavLink>
       </nav>
     </header>
   );

@@ -3,18 +3,39 @@ import { NavLink, Outlet } from "react-router-dom";
 
 function HostLayout() {
   const activeStyles = {
-    fontWeight:700,
-    textDecoration:"underline",
-    color:"#161616"
-
-  }
+    fontWeight: 700,
+    textDecoration: "underline",
+    color: "#161616",
+  };
+  /** relative link - no need to add absolute path */ 
   return (
     <>
       <nav className="host-nav">
-        <NavLink end style={({isActive})=>(isActive?activeStyles:null)} to="/host">Dashboard</NavLink>
-        <NavLink style={({isActive})=>(isActive?activeStyles:null)} to="/host/income">Income</NavLink>
-        <NavLink style={({isActive})=>(isActive?activeStyles:null)} to="/host/vans">Vans</NavLink>
-        <NavLink style={({isActive})=>(isActive?activeStyles:null)} to="/host/reviews">Reviews</NavLink>
+        <NavLink
+          to="."
+          end
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
+          Dashboard
+        </NavLink>
+        <NavLink
+          to="income"
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
+          Income
+        </NavLink>
+        <NavLink
+          to="vans"
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
+          Vans
+        </NavLink>
+        <NavLink
+          to="reviews"
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
+          Reviews
+        </NavLink>
       </nav>
       <Outlet />
     </>
