@@ -2,69 +2,168 @@
     box-sizing: border-box;
 }
 
-html, body{
+html, body {
     margin: 0;
     padding: 0;
-    background-color: rgb(252, 246, 232);
-    font-family: sans-serif;
+    background-color: #FFF7ED;
+    font-family: "Inter", sans-serif;
 }
 
-img{
-    width: 100%;
-    object-fit: cover;
+body::-webkit-scrollbar {
+  display: none;
 }
 
-p{
-    line-height: 1.5em;
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-a{
-    text-decoration: none;
-    color: #000;
-    font-weight: 700;
-
-}
-
-nav {
-    display: flex;
-    gap: 1em;
-}
-
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1.5em;
-}
-.home-link{
-    font-size: 1.5em;
-}
-
-.about-page-content,.about-page-cta{
-    margin: 1.5em;
-}
-
-.home-container {
+.site-wrapper {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url(https://picsum.photos/id/33/600/200);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 2em 1em;
-    color: #fff;
-}
-.home-container > a, .about-page-cta > a {
-    background-color: orange;
-    color: #fff;
-    text-align: center;
-    padding:  1em 3em;
-    border-radius: .5em;
 }
 
-.about-page-cta{
-    background-color: rgb(222, 177, 118);
-    padding: 1.5em;
-    border-radius:.5em;
+header {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    padding-block: 10px;
+}
+
+header .site-logo {
+    color: black;
+    margin-right: auto;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+header a {
+    text-decoration: none;
+    color: #4D4D4D;
+    font-weight: 600;
+    padding: 5px 20px;
+}
+
+header a:hover {
+    color: #161616;
+    text-decoration: underline;
+}
+
+main {
+    margin-bottom: 84px;
+}
+
+footer {
+    background-color: #161616;
+    color: #AAAAAA;
+    height: 74px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    font-weight: 500;
+}
+
+.link-button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    padding: .75rem 1.375rem;
+    color: initial;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform .1s ease-in-out;
+}
+
+.link-button:hover {
+    transform: translate(1px, 1px);
+}
+
+/*** HOME PAGE ***/
+.home-container {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("../src/assets/images/home-hero.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 350px;
+    color: white;
+    padding: 45px 23px;
+}
+
+.home-container h1 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 42px;
+}
+
+.home-container p {
+    line-height: 24px;
+}
+
+.home-container a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #FF8C38;
+    border: none;
+    width: 100%;
+    margin-top: 27px;
+    padding-block: .75rem;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform .1s ease-in-out;
+}
+
+.home-container a:hover {
+    transform: translate(1px, 1px);
+}
+
+
+/*** ABOUT PAGE ***/
+.about-hero-image {
+    max-width: 100%;
+}
+
+.about-page-content {
+    padding-inline: 23px;
+    color: #161616;
+    margin-bottom: 55px;
+}
+
+.about-page-content h1 {
+    line-height: 38px;
+}
+
+.about-page-content p {
+    line-height: 22px;
+}
+
+.about-page-cta {
+    background-color: #FFCC8D;
+    color: #161616;
+    padding-inline: 32px;
+    padding-bottom: 32px;
+    margin-inline: 27px;
+    border-radius: 5px;
+}
+
+.about-page-cta h2 {
+    margin: 0;
+    padding-block: 37px;
+}
+
+.about-page-cta .link-button {
+    background-color: #161616;
+    color: white;
+    border-radius: 10px;
 }
 
 
@@ -200,4 +299,27 @@ i[class*='van-type-'] {
     background-color: #FF8C38;
     color: white;
     font-size: 1.125rem;
+}
+
+.host-nav {
+    display: flex;
+}
+
+.host-nav a {
+    text-decoration: none;
+    color: #4D4D4D;
+    font-weight: 500;
+    padding: 5px 20px;
+}
+
+.host-nav a:hover {
+    color: #161616;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.active-link{
+    font-weight: 700;
+    text-decoration: underline;
+    color: #161616;
 }
