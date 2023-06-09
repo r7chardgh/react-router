@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useSearchParams } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Vans from "./pages/Vans/Vans";
@@ -10,13 +10,13 @@ import Income from "./pages/Host/Income";
 import HostVans from "./pages/Host/HostVans";
 import Reviews from "./pages/Host/Reviews";
 import HostVanDetail from "./pages/Host/HostVanDetail";
+import HostVanInfo from "./pages/Host/HostVanInfo";
+import HostVanPricing from "./pages/Host/HostVanPricing";
+import HostVanPhotos from "./pages/Host/HostVanPhotos";
 import NewLayout from "./components/NewLayout";
 import HostLayout from "./components/HostLayout";
 
 import "./server";
-import HostVanInfo from "./pages/Host/HostVanInfo";
-import HostVanPricing from "./pages/Host/HostVanPricing";
-import HostVanPhotos from "./pages/Host/HostVanPhotos";
 
 
 function App() {
